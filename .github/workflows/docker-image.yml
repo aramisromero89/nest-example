@@ -14,9 +14,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    
     - name: Build the Docker image
-      run:
-      - docker build . --file Dockerfile --tag api:latest
+      run: docker build . --file Dockerfile --tag api:latest
+
     - name: Publish Docker image
-      run:
-      - docker push docker.pyxelsolution.com/faind/api:latest
+      run: docker push docker.pyxelsolution.com/faind/api:latest
