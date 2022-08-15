@@ -17,4 +17,6 @@ jobs:
     - name: Build the Docker image
       run:
       - docker build . --file Dockerfile --tag api:latest
+    - name: Publish Docker image
+      run:
       - docker push docker.pyxelsolution.com/faind/api:latest
