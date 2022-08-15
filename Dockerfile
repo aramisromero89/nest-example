@@ -5,7 +5,7 @@ WORKDIR /app
 
 COPY . .
 
-RUN npm i -g @nest/cli
+RUN npm i -g @nestjs/cli
 
 RUN npm ci
 
