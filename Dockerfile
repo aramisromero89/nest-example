@@ -3,10 +3,10 @@ ENV NODE_ENV=production
 
 WORKDIR /app
 
-RUN npm i -g @nestjs/cli
+COPY . .
 
-RUN nest new test
+RUN npm ci
 
-WORKDIR /app/test
+RUN nest build
 
 CMD nest start
